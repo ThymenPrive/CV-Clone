@@ -1,0 +1,72 @@
+.cv2-container {
+    height: 100vh;
+    font-family: 'ebrima';
+    background-image: url('/afbeelding2.png'); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in; /* Langzamer infaden */
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
+  
+  .blue-line {
+    width: 200px; /* Vaste lengte van de lijn */
+    height: 3px;
+    background-color: #ff6700;
+    position: relative;
+    right: -100vw; /* Begin volledig buiten het scherm rechts */
+    transition: right 0.5s ease-in; /* Sneller naar links schuiven */
+    margin-top: 10px;
+  }
+  
+  .blue-line.visible {
+    right: 0; /* Schuif naar de normale positie onder de tekst */
+  }
+  
+  .navigation-arrows {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .down-arrow, .up-arrow {
+    font-size: 3rem;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  

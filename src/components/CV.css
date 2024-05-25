@@ -1,6 +1,19 @@
+.cv-container {
+  height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-family: 'ebrima';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
 .navigation-arrows {
   position: absolute;
-  bottom: 20px; /* Plaats de pijlen 20px van de onderrand */
+  bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
