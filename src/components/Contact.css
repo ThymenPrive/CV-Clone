@@ -1,6 +1,6 @@
 .contact-container {
     height: 100vh;
-    padding: 20px;
+    padding: 20 20 40 20px;
     background-color: #ffffff;
     font-family: 'ebrima';
     display: flex;
@@ -13,7 +13,7 @@
   
   .navigation-arrows {
     position: absolute;
-    bottom: 20px;
+    bottom: 10vh; /* Plaats de pijlen 20px van de onderrand */
     display: flex;
     flex-direction: column;
     align-items: center;

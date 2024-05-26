@@ -59,7 +59,7 @@ const CV2 = () => {
       <p>Dit is de tweede CV sectie.</p>
       <div className={`additional-info ${showText ? 'visible' : ''}`}>
         <p className={`fade-in ${showText ? 'visible' : ''}`}>
-          38 jaar, waarvan al 12 jaar in België
+          39 jaar, waarvan al 12 jaar in België
         </p>
         <div className={`blue-line ${showLine ? 'visible' : ''}`}></div>
       </div>
