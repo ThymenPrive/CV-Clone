@@ -25,6 +25,11 @@
     cursor: pointer;
     animation: bounce 2s infinite;
   }
+
+  .header{
+    position: absolute;
+    top: 10vw;
+  }
   
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {

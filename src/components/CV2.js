@@ -55,7 +55,7 @@ const CV2 = () => {
 
   return (
     <div className="cv2-container" id="cv2">
-      <h1>CV2</h1>
+      <h1 className='header'>CV2</h1>
       <p>Dit is de tweede CV sectie.</p>
       <div className={`additional-info ${showText ? 'visible' : ''}`}>
         <p className={`fade-in ${showText ? 'visible' : ''}`}>

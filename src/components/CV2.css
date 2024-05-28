@@ -20,6 +20,11 @@
     margin-top: 20px;
   }
   
+  .header{
+    position: absolute;
+    top: 10vw;
+  }
+
   .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in; /* Langzamer infaden */
@@ -30,7 +35,7 @@
   }
   
   .blue-line {
-    width: 200px; /* Vaste lengte van de lijn */
+    width: 64vw; /* Vaste lengte van de lijn */
     height: 3px;
     background-color: #ff6700;
     position: relative;
