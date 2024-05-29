@@ -21,7 +21,7 @@ const AboutMe = () => {
 
   return (
     <div className="aboutme-container" id="aboutme">
-      <h1 className='header'>Over Mij</h1>
+      <h1 className='header'>OVER MIJ</h1>
       <p>Dit is de About Me sectie. Hier vertel ik iets over mezelf.</p>
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>

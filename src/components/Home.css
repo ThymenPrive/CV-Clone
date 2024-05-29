@@ -1,4 +1,5 @@
 .home-container {
+  width: 100%;
   height: 100vh;
   font-family: 'ebrima';
   background-image: url('/afbeelding.png'); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */

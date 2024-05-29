@@ -21,7 +21,7 @@ const Skills = () => {
 
   return (
     <div className="skills-container" id="skills">
-      <h1 className='header'>Skills</h1>
+      <h1 className='header'>SKILLS</h1>
       <p>Dit is de Skills sectie.</p>
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>

@@ -1,5 +1,8 @@
 import React from 'react';
 import { scroller } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faUserPlus, faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt as faFileAltRegular } from '@fortawesome/free-regular-svg-icons'; // Regular variant
 import './Contact.css';
 
 const Contact = () => {
@@ -20,30 +23,41 @@ const Contact = () => {
   };
 
   const handleDownload = () => {
-    window.location.href = '/ThymenWillemsen.pdf';
+    const link = document.createElement('a');
+    link.href = '../ThymenWillemsen.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleAddContact = () => {
-    if (navigator.contacts && navigator.contacts.save) {
-      const contact = {
-        name: 'Thymen Willemsen',
-        tel: ['+32470968413']
-      };
-      navigator.contacts.save([contact])
-        .then(() => alert('Contact toegevoegd!'))
-        .catch((err) => alert('Fout bij het toevoegen van contact: ' + err));
-    } else {
-      alert('Contact toevoegen wordt niet ondersteund op dit apparaat.');
-    }
+    const vcf = `BEGIN:VCARD
+VERSION:3.0
+FN:Thymen Willemsen
+TEL:+32470968413
+END:VCARD`;
+
+    const blob = new Blob([vcf], { type: 'text/vcard' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'ThymenWillemsen.vcf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     if (navigator.share) {
-      navigator.share({
-        title: 'Thymen Willemsen',
-        text: 'Bekijk de website van Thymen Willemsen',
-        url: 'https://thymenwillemsen.com/'
-      }).catch((error) => alert('Fout bij het delen: ' + error));
+      try {
+        await navigator.share({
+          title: 'Thymen Willemsen',
+          text: 'Bekijk het CV van Thymen Willemsen',
+          url: 'https://thymenwillemsen.com/'
+        });
+      } catch (error) {
+        alert('Fout bij het delen: ' + error);
+      }
     } else {
       alert('Delen wordt niet ondersteund op dit apparaat.');
     }
@@ -51,14 +65,24 @@ const Contact = () => {
 
   return (
     <div className="contact-container" id="contact">
-      <h1 className='header'>Contact</h1>
+      <h1 className='header'>CONTACT</h1>
       <p>Dit is de Contact sectie.</p>
       <div className="button-container">
-        <button onClick={handleCall}>Bellen</button>
-        <button onClick={handleMail}>Mailen</button>
-        <button onClick={handleDownload}>Download PDF</button>
-        <button onClick={handleAddContact}>Contact toevoegen</button>
-        <button onClick={handleShare}>Delen</button>
+        <button onClick={handleCall}>
+          <FontAwesomeIcon icon={faPhone} /> Bellen
+        </button>
+        <button onClick={handleMail}>
+          <FontAwesomeIcon icon={faEnvelope} /> Mailen
+        </button>
+        <button onClick={handleDownload}>
+          <FontAwesomeIcon icon={faFileAltRegular} /> Download PDF
+        </button>
+        <button onClick={handleAddContact}>
+          <FontAwesomeIcon icon={faUserPlus} /> Contact toevoegen
+        </button>
+        <button onClick={handleShare}>
+          <FontAwesomeIcon icon={faShareAlt} /> Delen
+        </button>
       </div>
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>

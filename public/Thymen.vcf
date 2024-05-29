@@ -1,0 +1,13 @@
+const vcf = `BEGIN:VCARD
+VERSION:3.0
+FN:Thymen Willemsen
+TEL;TYPE=WORK:+32 (0)470 96 84 13
+EMAIL:thymenwillemsen@gmail.com
+PHOTO;TYPE=PNG:ThymenWillemsen.png
+END:VCARD`
+
+  // make vcf file downloadable
+  res.setHeader('Content-Type', 'text/vcard')
+  res.setHeader('Content-Disposition', `attachment; filename="Thymen.vcf"`)
+  res.send(vcf)
+

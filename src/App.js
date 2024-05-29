@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
 import { Element } from 'react-scroll';
@@ -11,6 +11,14 @@ import Contact from './components/Contact';
 import CookiePolicy from './components/CookiePolicy';
 
 function App() {
+  const [showStip, setShowStip] = useState(false);
+
+  const handleTriggerStippen = () => {
+    setTimeout(() => {
+      setShowStip(true);
+    }, 2000); // 3 seconden vertraging
+  };
+
   return (
     <Router>
       <div>
@@ -34,10 +42,10 @@ function App() {
           <Route path="/" element={
             <>
               <Element name="home">
-                <Home />
+                <Home onTriggerStippen={handleTriggerStippen} />
               </Element>
               <Element name="cv">
-                <CV />
+                <CV showStip={showStip} />
               </Element>
               <Element name="cv2">
                 <CV2 />
