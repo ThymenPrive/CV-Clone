@@ -10,11 +10,17 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// Voeg deze regels toe om scrollen te voorkomen
+// Voeg de volgende regels terug, maar zorg ervoor dat ze niet de hele pagina blokkeren
 window.addEventListener('wheel', function(e) {
-  e.preventDefault();
+  const isArrow = e.target.classList.contains('up-arrow') || e.target.classList.contains('down-arrow');
+  if (!isArrow) {
+    e.preventDefault();
+  }
 }, { passive: false });
 
 window.addEventListener('touchmove', function(e) {
-  e.preventDefault();
+  const isArrow = e.target.classList.contains('up-arrow') || e.target.classList.contains('down-arrow');
+  if (!isArrow) {
+    e.preventDefault();
+  }
 }, { passive: false });

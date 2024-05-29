@@ -1,17 +1,35 @@
+/* Voeg algemene reset regels toe */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden; /* Voorkomt horizontaal scrollen */
 }
 
-/* Voeg deze regel toe aan de root van je applicatie */
+/* Basis styling voor root element */
 #root {
   width: 100%;
   height: 100%;
 }
 
+/* Specifieke styling voor container-elementen */
+.home-container,
+.aboutme-container,
+.cv-container,
+.skills-container,
+.contact-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .navigation-arrows {
   position: absolute;
@@ -38,4 +56,19 @@ html, body {
   60% {
     transform: translateY(-5px);
   }
+}
+
+.blue-line-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: blue;
+  transform: translateX(100%); /* Begin buiten de viewport aan de rechterkant */
+  transition: transform 1s ease-in-out;
+}
+
+.blue-line-home.visible {
+  transform: translateX(0); /* Schuift naar binnen */
 }
