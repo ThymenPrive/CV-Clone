@@ -14,17 +14,18 @@
 }
 
 .blue-line-home {
-  width: 50px; /* Vaste lengte van de lijn */
+  width: 0px; /* Vaste lengte van de lijn */
   height: 3px;
   background-color: #ff6700;
   position: relative;
-  right: -100vw; /* Begin volledig buiten het scherm rechts */
+  right: -48vw; /* Begin volledig buiten het scherm rechts */
   transition: right 1s ease-in; /* Sneller naar links schuiven */
   margin-bottom: 20px;
 }
 
 .blue-line-home.visible {
   right: 0; /* Schuif naar de normale positie onder de tekst */
+  width: 50px;
 }
 
 .fade-in {

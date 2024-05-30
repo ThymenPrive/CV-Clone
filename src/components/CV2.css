@@ -1,77 +1,77 @@
 .cv2-container {
-    height: 100vh;
-    font-family: 'ebrima';
-    background-image: url('/afbeelding2.png'); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */
-    background-size: cover;
-    background-position: calc(50% - 110px) center; /* Schuif de afbeelding 50 px naar links */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    color: white;
-  }
-  
-  .additional-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .header{
-    position: absolute;
-    top: 10vw;
-  }
+  height: 100vh;
+  font-family: 'ebrima';
+  background-image: url('/afbeelding2.png'); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */
+  background-size: cover;
+  background-position: calc(50% - 110px) center; /* Schuif de afbeelding 50 px naar links */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
 
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in; /* Langzamer infaden */
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-  }
-  
-  .blue-line {
-    width: 64vw; /* Vaste lengte van de lijn */
-    height: 3px;
-    background-color: #ff6700;
-    position: relative;
-    right: -100vw; /* Begin volledig buiten het scherm rechts */
-    transition: right 0.5s ease-in; /* Sneller naar links schuiven */
-    margin-top: 10px;
-  }
-  
-  .blue-line.visible {
-    right: 0; /* Schuif naar de normale positie onder de tekst */
-  }
-  
-  .navigation-arrows {
-    position: absolute;
-    bottom: 10vh; /* Plaats de pijlen 20px van de onderrand */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .down-arrow, .up-arrow {
-    font-size: 3rem;
-    cursor: pointer;
-    animation: bounce 2s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.header {
+  position: absolute;
+  top: 10vw;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in; /* Langzamer infaden */
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.blue-line {
+  height: 3px;
+  background-color: #ff6700;
+  position: relative;
+  right: 0; /* Begin op de juiste positie */
+  width: 0; /* Begin met een breedte van 0 */
+  transition: width 1s ease-in-out, right 1s ease-in-out 1s; /* Eerst breedte aanpassen, dan schuiven */
+  margin-top: 10px;
+}
+
+.blue-line.visible {
+  width: 64vw; /* Eerst uitrekken tot volledige breedte */
+  /* right: 50%; Daarna naar links schuiven */
+}
+
+.navigation-arrows {
+  position: absolute;
+  bottom: 10vh; /* Plaats de pijlen 20px van de onderrand */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.down-arrow, .up-arrow {
+  font-size: 3rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
       transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    }
   }
-  
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
