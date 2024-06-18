@@ -12,9 +12,26 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         var password = 'Hired!'; // Stel hier je wachtwoord in
-        var userPassword = prompt('Please enter the password:');
-        if (userPassword !== password) {
-          alert('Incorrect password!');
+        var attempts = 3; // Maximum aantal pogingen
+        var userPassword;
+
+        while (attempts > 0) {
+          userPassword = prompt('Please enter the password:');
+          if (userPassword === null) {
+            alert('Cancelled by user.');
+            window.location.href = 'about:blank';
+            break;
+          } else if (userPassword === password) {
+            alert('Access granted!');
+            break;
+          } else {
+            attempts--;
+            alert('Incorrect password! You have ' + attempts + ' attempts left.');
+          }
+        }
+
+        if (attempts === 0) {
+          alert('No more attempts left. Access denied.');
           window.location.href = 'about:blank';
         }
       });
