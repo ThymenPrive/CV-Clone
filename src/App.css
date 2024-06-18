@@ -33,7 +33,7 @@ html, body {
 
 .navigation-arrows {
   position: absolute;
-  bottom: 10vh; /* Plaats de pijlen 20px van de onderrand */
+  bottom: 14vh !important; /* Plaats de pijlen 20px van de onderrand */
   display: flex;
   flex-direction: column;
   align-items: center;

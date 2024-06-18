@@ -26,6 +26,7 @@ const CV = ({ showStip }) => {
         <span className={`stip ${showStip ? 'visible' : ''}`}></span>
         Dit is de CV sectie.
       </p>
+      
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>
           &#x2191;

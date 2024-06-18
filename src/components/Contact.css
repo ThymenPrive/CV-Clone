@@ -62,7 +62,7 @@
 
 .navigation-arrows {
   position: absolute;
-  bottom: 10vh;
+  bottom: 16vh !important;
   display: flex;
   flex-direction: column;
   align-items: center;
