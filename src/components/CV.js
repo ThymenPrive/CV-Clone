@@ -24,7 +24,22 @@ const CV = ({ showStip }) => {
       <h1 className='header'>WERK</h1>
       <p>
         <span className={`stip ${showStip ? 'visible' : ''}`}></span>
-        Dit is de CV sectie.
+        Huidige job: <span className='boldText'>Adviseur @ Rebel</span>
+      </p>
+      
+        <ul className='werkervaring'>
+          <li className='werkervaringItem'>Applicatieontwikkeling</li>
+          <li>UX- en UI-design</li>
+          <li>Projectmanagement</li>
+          <li>Financiële rekenmodellen</li>
+          <li>Interviews</li>
+          <li>Lid data team</li>
+          <li>Lid AI spearheding team</li>
+        </ul>
+
+        <p>
+        <span className={`stip ${showStip ? 'visible' : ''}`}></span>
+        Voorgaande jobs: <span className='boldText'>Digitalisering in de Tandheelkundige en Juwelenindustrie</span>
       </p>
       
       <div className="navigation-arrows">

@@ -12,9 +12,36 @@
 }
 
 .header{
+  padding-bottom: -100px;
+}
+
+.header{
   position: absolute;
   top: 10vw;
 }
+
+.boldText{
+  font-size: large;
+  font-weight: bold;
+  color: #064e95;
+}
+
+li{
+text-align: left;
+margin-bottom: 10px;
+}
+
+ul li::marker {
+  color: #064e95;
+}
+
+/* .werkervaring{
+
+}
+
+.werkervaringItem{
+
+} */
 
 .stip {
   display: inline-block;
