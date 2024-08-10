@@ -13,11 +13,17 @@
   color: white;
 }
 
+
+
 .additional-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 270px;
+}
+
+.opleidingen{
+  list-style: none;
 }
 
 .header {
@@ -37,16 +43,25 @@
 .blue-line {
   height: 3px;
   background-color: #ff6700;
-  position: relative;
-  right: 0; /* Begin op de juiste positie */
-  width: 0; /* Begin met een breedte van 0 */
-  transition: width 1s ease-in-out, right 1s ease-in-out 1s; /* Eerst breedte aanpassen, dan schuiven */
-  margin-top: 10px;
+  width: 64vw; /* Volledige breedte */
+  left: 18%; /* Zet de lijn op de juiste horizontale positie */
+
 }
 
-.blue-line.visible {
-  width: 64vw; /* Eerst uitrekken tot volledige breedte */
-  /* right: 50%; Daarna naar links schuiven */
+.stip {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ff6700;
+  border-radius: 50%;
+  position: relative;
+  left: -100vw; /* Begin volledig buiten het scherm links */
+  transition: left 1s ease-in; /* Sneller naar rechts schuiven */
+  margin-right: 10px; /* Ruimte tussen de stip en de tekst */
+}
+
+.stip.visible {
+  left: 0; /* Schuif naar de normale positie naast de tekst */
 }
 
 .navigation-arrows {

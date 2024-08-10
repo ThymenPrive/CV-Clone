@@ -1,14 +1,18 @@
 .cv-container {
   height: 100vh;
   padding: 20 20 40 20px;
-  background-color: #f0f0f0;
-  font-family: 'ebrima';
+/*   background-color: #d61212;
+ */  font-family: 'ebrima';
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
+}
+
+#werkBlok{
+  margin-top: -100px !important;
 }
 
 .header{

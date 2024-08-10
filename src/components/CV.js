@@ -22,7 +22,7 @@ const CV = ({ showStip }) => {
   return (
     <div className="cv-container" id="cv">
       <h1 className='header'>WERK</h1>
-      <p>
+      <p id='werkBlok'>
         <span className={`stip ${showStip ? 'visible' : ''}`}></span>
         Huidige job: <span className='boldText'>Adviseur @ Rebel</span>
       </p>
@@ -39,8 +39,14 @@ const CV = ({ showStip }) => {
 
         <p>
         <span className={`stip ${showStip ? 'visible' : ''}`}></span>
-        Voorgaande jobs: <span className='boldText'>Digitalisering in de Tandheelkundige en Juwelenindustrie</span>
+        Voorgaande jobs: <span className='boldText'>Digitale transformatie @</span>
       </p>
+      <ul className='werkervaring'>
+          <li className='werkervaringItem'>De tandheelkundige en juwelenindustrie</li>
+{/*           <li>De juwelenindustrie</li>
+ */}{/*           <li>Hier heb ik ik ambachtelijke processen <br/> heb omgezet in efficiënte, <br/> digitale workflows.</li>
+ */}          
+        </ul>
       
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>

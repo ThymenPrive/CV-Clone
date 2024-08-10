@@ -20,6 +20,11 @@ const CV2 = () => {
           setShowLine(true);
         }, 3000); // De lijn later laten verschijnen
 
+        const elements = document.querySelectorAll('.stip');
+        elements.forEach(el => {
+          el.classList.add('visible');
+        });
+
         return () => {
           clearTimeout(textTimer);
           clearTimeout(lineTimer);
@@ -56,12 +61,18 @@ const CV2 = () => {
   return (
     <div className="cv2-container" id="cv2">
       <h1 className='header'>OPLEIDINGEN</h1>
-      <p>Dit is de tweede CV sectie.</p>
+      <div className={`blue-line ${showLine ? 'visible' : ''}`} style={{marginTop: '-150px'}}></div>
+      <p className='boldText' style={{ color: 'white'}}>Meest recente opleidingen</p>
+
+
+      
       <div className={`additional-info ${showText ? 'visible' : ''}`}>
-        <p className={`fade-in ${showText ? 'visible' : ''}`}>
-          39 jaar, waarvan al 12 jaar in België
-        </p>
-        <div className={`blue-line ${showLine ? 'visible' : ''}`}></div>
+        <ul className='opleidingen'>
+          <li className='opleidingenItem'><span className='stip'></span>Industriële Informatica</li>
+          <li><span className='stip'></span>CAPM Project Management</li>
+          <li><span className='stip'></span>F1F9 Fast Modeling</li>
+        </ul>
+        
       </div>
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>
