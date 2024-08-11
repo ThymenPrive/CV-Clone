@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 const CookiePolicy = () => {
   return (
@@ -25,3 +25,4 @@ const CookiePolicy = () => {
 };
 
 export default CookiePolicy;
+ */

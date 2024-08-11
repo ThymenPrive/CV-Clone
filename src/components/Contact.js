@@ -1,8 +1,7 @@
 import React from 'react';
 import { scroller } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faUserPlus, faShareAlt } from '@fortawesome/free-solid-svg-icons';
-import { faFileAlt as faFileAltRegular } from '@fortawesome/free-regular-svg-icons'; // Regular variant
+import { faPhone, faEnvelope, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import './Contact.css';
 
 const Contact = () => {
@@ -22,15 +21,6 @@ const Contact = () => {
     window.location.href = 'mailto:thymenwillemsen@gmail.com';
   };
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '../ThymenWillemsen.pdf';
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const handleAddContact = () => {
     const vcf = `BEGIN:VCARD
 VERSION:3.0
@@ -47,26 +37,27 @@ END:VCARD`;
     document.body.removeChild(link);
   };
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: 'Thymen Willemsen',
-          text: 'Bekijk het CV van Thymen Willemsen',
-          url: 'https://thymenwillemsen.com/'
-        });
-      } catch (error) {
-        alert('Fout bij het delen: ' + error);
-      }
-    } else {
-      alert('Delen wordt niet ondersteund op dit apparaat.');
-    }
-  };
-
   return (
     <div className="contact-container" id="contact">
-      <h1 className='header'>CONTACT</h1>
-      <p>Dit is de Contact sectie.</p>
+      <h1 className='header' style={{paddingBottom: '10px'}} >CONTACT</h1>
+      <div className="orange-line"></div> {/* Toegevoegde oranje lijn */}
+      <p>Met dit CV wil ik mijn interesse kenbaar maken voor de onlangs geopende functie binnen team HFB en hoop ik uw aandacht te hebben gewekt.
+       <br/>
+      Mocht deze functie niet volledig aansluiten bij mijn profiel, dan sta ik ook open voor andere functies binnen uw bedrijf.</p>
+      <p>Graag zou ik mijzelf willen presenteren in een open en persoonlijk gesprek. Bij interesse kunt u mij rechtstreeks contacteren via onderstaande contactopties. Ik kijk uit naar uw reactie.</p>
+      <p>Met vriendelijke groet,
+      </p>
+      
+      
+
+      <div className="orange-dots-container"> {/* Toegevoegde container voor oranje stippen */}
+        <span className="orange-dot"></span>
+        <span className="orange-dot"></span>
+        <span className="orange-dot"></span>
+      </div>
+
+      <h2>Thymen Willemsen</h2>
+
       <div className="button-container">
         <button onClick={handleCall}>
           <FontAwesomeIcon icon={faPhone} /> Bellen
@@ -74,15 +65,11 @@ END:VCARD`;
         <button onClick={handleMail}>
           <FontAwesomeIcon icon={faEnvelope} /> Mailen
         </button>
-        <button onClick={handleDownload}>
-          <FontAwesomeIcon icon={faFileAltRegular} /> Download PDF
-        </button>
+        
         <button onClick={handleAddContact}>
           <FontAwesomeIcon icon={faUserPlus} /> Contact toevoegen
         </button>
-        <button onClick={handleShare}>
-          <FontAwesomeIcon icon={faShareAlt} /> Delen
-        </button>
+       
       </div>
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>

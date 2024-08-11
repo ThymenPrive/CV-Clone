@@ -1,3 +1,11 @@
+/* Schakel dark mode uit door de lichte modus te forceren */
+@media (prefers-color-scheme: dark) {
+  body {
+    color-scheme: light; /* Forceert lichte modus */
+  }
+}
+
+
 /* Voeg algemene reset regels toe */
 * {
   margin: 0;

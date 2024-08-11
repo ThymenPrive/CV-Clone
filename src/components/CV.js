@@ -29,12 +29,14 @@ const CV = ({ showStip }) => {
       
         <ul className='werkervaring'>
           <li className='werkervaringItem'>Applicatieontwikkeling</li>
-          <li>UX- en UI-design</li>
+          <li>UX/UI Design</li>
           <li>Projectmanagement</li>
-          <li>Financiële rekenmodellen</li>
-          <li>Interviews</li>
-          <li>Lid data team</li>
-          <li>Lid AI spearheding team</li>
+          <li>Functionele analyse</li>
+          <li>Data analyse</li>
+          <li>Lid van het data- en AI-team</li>
+          <li>Financiële rekenmodellen opstellen</li>
+          <li>Klantinteractie en behoeftenanalyse</li>
+
         </ul>
 
         <p>

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import CookieConsent from 'react-cookie-consent';
-import { Element } from 'react-scroll';
+/* import CookieConsent from 'react-cookie-consent';
+ */import { Element } from 'react-scroll';
 import Home from './components/Home';
 import CV from './components/CV';
 import CV2 from './components/CV2';
 import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
-import CookiePolicy from './components/CookiePolicy';
-
+/* import CookiePolicy from './components/CookiePolicy';
+ */
 function App() {
   const [showStip, setShowStip] = useState(false);
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <div>
-        <CookieConsent
+        {/* <CookieConsent
           location="bottom"
           buttonText="Accepteren"
           declineButtonText="Weigeren"
@@ -37,7 +37,7 @@ function App() {
         >
           Deze website maakt gebruik van cookies om de gebruikerservaring te verbeteren.{" "}
           <a href="/cookie-policy" style={{ color: "#61dafb" }}>Lees meer</a>
-        </CookieConsent>
+        </CookieConsent> */}
         <Routes>
           <Route path="/" element={
             <>
@@ -61,8 +61,8 @@ function App() {
               </Element>
             </>
           } />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-        </Routes>
+{/*           <Route path="/cookie-policy" element={<CookiePolicy />} />
+ */}        </Routes>
       </div>
     </Router>
   );

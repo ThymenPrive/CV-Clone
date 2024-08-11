@@ -1,9 +1,9 @@
 .cv2-container {
   height: 100vh;
   font-family: 'ebrima';
-  background-image: url('/afbeelding2.png'); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */
+  background-image: url('/afbeelding2.png');
   background-size: cover;
-  background-position: calc(50% - 110px) center; /* Schuif de afbeelding 50 px naar links */
+  background-position: calc(50% - 155px) center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,27 +13,31 @@
   color: white;
 }
 
-
-
 .additional-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 270px;
+  margin-top: 220px;
 }
 
-.opleidingen{
+.opleidingen {
   list-style: none;
+  align-items: center;
+  
 }
 
-.header {
+.opleidingenItem{
+text-align: center;
+}
+
+/* .header {
   position: absolute;
   top: 10vw;
-}
+} */
 
 .fade-in {
   opacity: 0;
-  transition: opacity 1s ease-in; /* Langzamer infaden */
+  transition: opacity 0.5s ease-in;
 }
 
 .fade-in.visible {
@@ -43,30 +47,53 @@
 .blue-line {
   height: 3px;
   background-color: #ff6700;
-  width: 64vw; /* Volledige breedte */
-  left: 18%; /* Zet de lijn op de juiste horizontale positie */
-
+  width: 64vw;
+  left: 18%;
 }
 
-.stip {
+/* Nieuwe styling voor de blauwe stippen */
+@keyframes fadeInOut {
+  0%, 50% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
+.blue-stip {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #ff6700;
+  width: 8px;
+  height: 8px;
+  background-color: #064e95;
+  ; /* Blauwe kleur voor de stippen */
   border-radius: 50%;
-  position: relative;
-  left: -100vw; /* Begin volledig buiten het scherm links */
-  transition: left 1s ease-in; /* Sneller naar rechts schuiven */
-  margin-right: 10px; /* Ruimte tussen de stip en de tekst */
+  margin-right: 10px;
+  opacity: 0;
+  animation: fadeInOut 9s ease-in-out infinite;
 }
 
-.stip.visible {
-  left: 0; /* Schuif naar de normale positie naast de tekst */
+.blue-stip:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.blue-stip:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.blue-stip:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@media only screen and (max-width: 600px) {
+  .blue-stip {
+    display: inline-block;
+  }
 }
 
 .navigation-arrows {
   position: absolute;
-  bottom: 10vh; /* Plaats de pijlen 20px van de onderrand */
+  bottom: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
