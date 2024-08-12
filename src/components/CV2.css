@@ -1,45 +1,34 @@
 .cv2-container {
-  height: 100svh;
-  font-family: 'ebrima';
-  background-image: url('/afbeelding2.png');
+  font-family: "ebrima";
+  background-image: url("/afbeelding2.png");
   background-size: cover;
   background-position: calc(50% - 155px) center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  position: relative;
   color: white;
 }
 
-.CV2-blok-1{
+.CV2-blok-1 {
   padding: 0;
   margin: 0;
-  height: 20svh;
-  }
-  .CV2-blok-2{
-  padding: 0;
-  margin: 0;
-  height: 60svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  }
-  .CV2-blok-3{
-  padding: 0;
-  margin: 0;
-  height: 20svh;
-  }
+}
 
-.CV2Blok1{
+.CV2-blok-2 {
+  padding: 0;
+  margin: 0;
+}
+
+.CV2-blok-3 {
+  padding: 0;
+  margin: 0;
+}
+
+.CV2Blok1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.headerCV2{
+.headerCV2 {
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -58,11 +47,10 @@
   margin-right: 20px;
   list-style: none;
   align-items: center;
-  
 }
 
-.opleidingenItem{
-text-align: center;
+.opleidingenItem {
+  text-align: center;
 }
 
 /* .header {
@@ -91,10 +79,12 @@ text-align: center;
 
 /* Nieuwe styling voor de blauwe stippen */
 @keyframes fadeInOut {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 0;
   }
-  25%, 75% {
+  25%,
+  75% {
     opacity: 1;
   }
 }
@@ -103,8 +93,7 @@ text-align: center;
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: #064e95;
-  ; /* Blauwe kleur voor de stippen */
+  background-color: #064e95; /* Blauwe kleur voor de stippen */
   border-radius: 50%;
   margin-right: 10px;
   opacity: 0;
@@ -156,5 +145,3 @@ text-align: center;
   }
 }
  */
-
- 

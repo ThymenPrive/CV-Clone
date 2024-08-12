@@ -1,14 +1,6 @@
 .contact-container {
-  height: 100vh;
-  padding: 20px;
   background-color: #ffffff;
   font-family: 'ebrima';
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
 }
 
 /* .header {

@@ -1,16 +1,9 @@
 .home-container {
-  height: 100vh;
   font-family: 'ebrima';
   background-image: url('/afbeelding.png'); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: rgb(255, 255, 255);
-  text-align: center;
-  position: relative;
 }
 
 .blue-line-home {

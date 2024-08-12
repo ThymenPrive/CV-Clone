@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { scroller } from 'react-scroll';
-import './CV2.css';
+import React, { useEffect, useState } from "react";
+import { scroller } from "react-scroll";
+import "./CV2.css";
 
 const CV2 = () => {
   const [showText, setShowText] = useState(false);
@@ -8,7 +8,7 @@ const CV2 = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const cv2Section = document.getElementById('cv2');
+      const cv2Section = document.getElementById("cv2");
       const rect = cv2Section.getBoundingClientRect();
       const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
 
@@ -27,61 +27,93 @@ const CV2 = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Initial check
     handleScroll();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToNextSection = () => {
-    scroller.scrollTo('skills', {
+    scroller.scrollTo("skills", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart",
     });
   };
 
   const scrollToPreviousSection = () => {
-    scroller.scrollTo('cv', {
+    scroller.scrollTo("cv", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart",
     });
   };
 
   return (
-    <div className="cv2-container" id="cv2">
-<div className='CV2Blok1'>
-  <div className='CV2-blok-1'>
-      <h1 className='headerCV2'>OPLEIDINGEN</h1>
-      <div id='streep' className={`blue-line2 ${showLine ? 'visible' : ''}`} ></div>
-      <p className='boldText' style={{ color: 'white', padding: '0px', margin: '0px'}}>Meest recente opleidingen</p>
-      </div>
-      </div>
-      <div className='CV2-blok-2'>
-      <div className={`additional-info ${showText ? 'visible' : ''}`}>
-        <ul className='opleidingen'>
-        <li className='opleidingenItem'><span className='blue-stip'></span>CAPM Project Management</li>
-          <li className='opleidingenItem'><span className='blue-stip'></span>F1F9 Fast - Financial Modeling</li>
-          <li className='opleidingenItem'><span className='blue-stip'></span>Industriële Informatica - Hogeschool PXL</li>
-        </ul>
-      </div>
-      </div>
+    <div className="cv2-container wrapper" id="cv2">
+      <div className="wrapper__container">
+        <div className="wrapper__container-inner jc-beetwen">
+          <div className="CV2Blok1">
+            <div className="CV2-blok-1">
+              <h1 className="headerCV2">OPLEIDINGEN</h1>
+              <div
+                id="streep"
+                className={`blue-line2 ${showLine ? "visible" : ""}`}
+              ></div>
+              <p
+                className="boldText"
+                style={{ color: "white", padding: "0px", margin: "0px" }}
+              >
+                Meest recente opleidingen
+              </p>
+            </div>
+          </div>
+          <div className="CV2-blok-2">
+            <div className={`additional-info ${showText ? "visible" : ""}`}>
+              <ul className="opleidingen">
+                <li className="opleidingenItem">
+                  <span className="blue-stip"></span>CAPM Project Management
+                </li>
+                <li className="opleidingenItem">
+                  <span className="blue-stip"></span>F1F9 Fast - Financial
+                  Modeling
+                </li>
+                <li className="opleidingenItem">
+                  <span className="blue-stip"></span>Industriële Informatica -
+                  Hogeschool PXL
+                </li>
+              </ul>
+            </div>
+          </div>
 
-      <div className='CV2-blok-3'>
-      <div className="navigation-arrows">
-        <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>
-          &#x2191;
-        </div>
-        <div className="down-arrow" onClick={(e) => {e.stopPropagation(); scrollToNextSection();}}>
-          &#x2193;
+          <div className="CV2-blok-3">
+            <div className="navigation-arrows">
+              <div
+                className="up-arrow"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  scrollToPreviousSection();
+                }}
+              >
+                &#x2191;
+              </div>
+              <div
+                className="down-arrow"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  scrollToNextSection();
+                }}
+              >
+                &#x2193;
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

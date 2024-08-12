@@ -1,13 +1,5 @@
 .cv-container {
-  height: 100svh;
-  margin: 20 20 40 20px !important;
   font-family: 'ebrima';
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  position: relative;
 }
 /* #werkBlok{
   margin-top: -100px !important;
@@ -25,12 +17,12 @@
 .CV-blok-1{
 padding: 0;
 margin: 0;
-height: 10svh;
+/* height: 10svh; */
 }
 .CV-blok-2{
 padding: 0;
 margin: 0;
-height: 70svh;
+/* height: 70svh; */
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -38,7 +30,7 @@ justify-content: space-around;
 .CV-blok-3{
 padding: 0;
 margin: 0;
-height: 20svh;
+/* height: 20svh; */
 }
 
 
@@ -57,11 +49,11 @@ ul li::marker {
   color: #064e95;
 }
 
-.werkervaring{
+.werkervaring {
   padding: 0;
   display: flex;
   flex-direction: column;
-align-items: center;
+  align-items: center;
 }
 
 .werkervaringItem{
@@ -111,3 +103,10 @@ align-items: center;
     transform: translateY(-5px);
   }
 }
+
+/* @media (max-width: 576px) {
+  .werkervaring {
+    display: block;
+    column-count: 2;
+  }
+} */
