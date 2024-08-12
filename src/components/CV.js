@@ -22,7 +22,7 @@ const CV = ({ showStip }) => {
   return (
     <div className="cv-container wrapper" id="cv">
       <div className="wrapper__container">
-        <div className="wrapper__container-inner">
+        <div className="wrapper__container-inner jc-between">
           <div className="CV-blok-1">
             <h1 className="header">WERK</h1>
           </div>

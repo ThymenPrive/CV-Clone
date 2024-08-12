@@ -21,26 +21,30 @@ const Skills = () => {
 
   return (
     <div className="skills-container wrapper" id="skills">
-      <h1 className="header">SKILLS</h1>
-      <p>Dit is de Skills sectie.</p>
-      <div className="navigation-arrows">
-        <div
-          className="up-arrow"
-          onClick={(e) => {
-            e.stopPropagation();
-            scrollToPreviousSection();
-          }}
-        >
-          &#x2191;
-        </div>
-        <div
-          className="down-arrow"
-          onClick={(e) => {
-            e.stopPropagation();
-            scrollToNextSection();
-          }}
-        >
-          &#x2193;
+      <div className="wrapper__container">
+        <div className="wrapper__container-inner">
+          <h1 className="header">SKILLS</h1>
+          <p>Dit is de Skills sectie.</p>
+          <div className="navigation-arrows">
+            <div
+              className="up-arrow"
+              onClick={(e) => {
+                e.stopPropagation();
+                scrollToPreviousSection();
+              }}
+            >
+              &#x2191;
+            </div>
+            <div
+              className="down-arrow"
+              onClick={(e) => {
+                e.stopPropagation();
+                scrollToNextSection();
+              }}
+            >
+              &#x2193;
+            </div>
+          </div>
         </div>
       </div>
     </div>

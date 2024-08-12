@@ -56,7 +56,7 @@ const CV2 = () => {
   return (
     <div className="cv2-container wrapper" id="cv2">
       <div className="wrapper__container">
-        <div className="wrapper__container-inner jc-beetwen">
+        <div className="wrapper__container-inner jc-between">
           <div className="CV2Blok1">
             <div className="CV2-blok-1">
               <h1 className="headerCV2">OPLEIDINGEN</h1>
