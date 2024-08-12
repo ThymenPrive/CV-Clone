@@ -11,28 +11,28 @@ ReactDOM.render(
 );
 
 // Voeg de volgende regels terug, maar zorg ervoor dat ze niet de hele pagina blokkeren
-window.addEventListener(
-  "wheel",
-  function (e) {
-    const isArrow =
-      e.target.classList.contains("up-arrow") ||
-      e.target.classList.contains("down-arrow");
-    if (!isArrow) {
-      e.preventDefault();
-    }
-  },
-  { passive: false }
-);
+// window.addEventListener(
+//   "wheel",
+//   function (e) {
+//     const isArrow =
+//       e.target.classList.contains("up-arrow") ||
+//       e.target.classList.contains("down-arrow");
+//     if (!isArrow) {
+//       e.preventDefault();
+//     }
+//   },
+//   { passive: false }
+// );
 
-window.addEventListener(
-  "touchmove",
-  function (e) {
-    const isArrow =
-      e.target.classList.contains("up-arrow") ||
-      e.target.classList.contains("down-arrow");
-    if (!isArrow) {
-      e.preventDefault();
-    }
-  },
-  { passive: false }
-);
+// window.addEventListener(
+//   "touchmove",
+//   function (e) {
+//     const isArrow =
+//       e.target.classList.contains("up-arrow") ||
+//       e.target.classList.contains("down-arrow");
+//     if (!isArrow) {
+//       e.preventDefault();
+//     }
+//   },
+//   { passive: false }
+// );
