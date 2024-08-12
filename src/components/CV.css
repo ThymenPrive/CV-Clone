@@ -55,6 +55,10 @@ ul li::marker {
   align-items: center;
 }
 
+.werkervaring li:last-child {
+  margin-bottom: 0;
+}
+
 .werkervaringItem {
 }
 
@@ -83,13 +87,6 @@ ul li::marker {
   width: 100%;
 }
 
-.down-arrow,
-.up-arrow {
-  font-size: 3rem;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-}
-
 @keyframes bounce {
   0%,
   20%,
@@ -108,6 +105,7 @@ ul li::marker {
 
 @media (max-width: 576px) {
   .werkervaring {
+    padding: 0;
     padding-left: 15px;
     align-items: start;
   }

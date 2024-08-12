@@ -66,7 +66,7 @@ const CV2 = () => {
               ></div>
               <p
                 className="boldText"
-                style={{ color: "white", padding: "0px", margin: "0px" }}
+                style={{ color: "white", padding: "0px" }}
               >
                 Meest recente opleidingen
               </p>

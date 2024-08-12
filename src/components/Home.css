@@ -1,6 +1,6 @@
 .home-container {
-  font-family: 'ebrima';
-  background-image: url('/afbeelding.png'); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */
+  font-family: "ebrima";
+  background-image: url("/afbeelding.png"); /* Zorg ervoor dat je het juiste pad naar je afbeelding gebruikt */
   background-size: cover;
   background-position: center;
   color: rgb(255, 255, 255);
@@ -46,12 +46,6 @@
   align-items: center;
   width: 100%;
 } */
-
-.down-arrow {
-  font-size: 3rem;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-}
 
 /* @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

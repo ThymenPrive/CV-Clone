@@ -1,6 +1,6 @@
 .contact-container {
   background-color: #ffffff;
-  font-family: 'ebrima';
+  font-family: "ebrima";
 }
 
 /* .header {
@@ -52,12 +52,12 @@
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  font-family: 'Ebrima';
+  font-family: "Ebrima";
   font-weight: bold;
 }
 
 .button-container button:hover {
-  background-color: #0038A8;
+  background-color: #0038a8;
   color: white;
 }
 
@@ -83,12 +83,6 @@
   align-items: center;
   width: 100%;
 } */
-
-.up-arrow {
-  font-size: 3rem;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-}
 
 /* @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

@@ -73,3 +73,33 @@ body {
 .jc-between {
   justify-content: space-between;
 }
+
+.down-arrow,
+.up-arrow {
+  font-size: 3rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 576px) {
+  .down-arrow,
+  .up-arrow {
+    font-size: 2rem;
+  }
+}
