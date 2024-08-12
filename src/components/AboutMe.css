@@ -14,8 +14,8 @@
   }
   
   .navigation-arrows {
-    position: absolute;
-    bottom: 10vh; /* Plaats de pijlen 20px van de onderrand */
+    margin-bottom: 20px !important;
+    padding-bottom: 20px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,11 +27,7 @@
     cursor: pointer;
     animation: bounce 2s infinite;
   }
-
- /*  .header{
-    position: absolute;
-    top: 10vw;
-  } */
+  
   
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -44,4 +40,3 @@
       transform: translateY(-5px);
     }
   }
-  

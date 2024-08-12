@@ -1,26 +1,61 @@
 .cv2-container {
-  height: 100vh;
+  height: 100svh;
   font-family: 'ebrima';
   background-image: url('/afbeelding2.png');
   background-size: cover;
   background-position: calc(50% - 155px) center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   position: relative;
   color: white;
 }
 
+.CV2-blok-1{
+  padding: 0;
+  margin: 0;
+  height: 20svh;
+  }
+  .CV2-blok-2{
+  padding: 0;
+  margin: 0;
+  height: 60svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  }
+  .CV2-blok-3{
+  padding: 0;
+  margin: 0;
+  height: 20svh;
+  }
+
+.CV2Blok1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerCV2{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .additional-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 220px;
+  margin-top: 250px;
 }
 
 .opleidingen {
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   list-style: none;
   align-items: center;
   
@@ -44,11 +79,14 @@ text-align: center;
   opacity: 1;
 }
 
-.blue-line {
+.blue-line2 {
   height: 3px;
   background-color: #ff6700;
-  width: 64vw;
-  left: 18%;
+  width: 60vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-self: center;
+  align-items: center;
 }
 
 /* Nieuwe styling voor de blauwe stippen */
@@ -90,7 +128,7 @@ text-align: center;
     display: inline-block;
   }
 }
-
+/* 
 .navigation-arrows {
   position: absolute;
   bottom: 10vh;
@@ -117,3 +155,6 @@ text-align: center;
       transform: translateY(-5px);
   }
 }
+ */
+
+ 

@@ -55,18 +55,24 @@ const CV2 = () => {
 
   return (
     <div className="cv2-container" id="cv2">
-      <h1 className='header'>OPLEIDINGEN</h1>
-      <div className={`blue-line ${showLine ? 'visible' : ''}`} style={{marginTop: '-90px'}}></div>
-      <p className='boldText' style={{ color: 'white'}}>Meest recente opleidingen</p>
-      
+<div className='CV2Blok1'>
+  <div className='CV2-blok-1'>
+      <h1 className='headerCV2'>OPLEIDINGEN</h1>
+      <div id='streep' className={`blue-line2 ${showLine ? 'visible' : ''}`} ></div>
+      <p className='boldText' style={{ color: 'white', padding: '0px', margin: '0px'}}>Meest recente opleidingen</p>
+      </div>
+      </div>
+      <div className='CV2-blok-2'>
       <div className={`additional-info ${showText ? 'visible' : ''}`}>
         <ul className='opleidingen'>
         <li className='opleidingenItem'><span className='blue-stip'></span>CAPM Project Management</li>
-
           <li className='opleidingenItem'><span className='blue-stip'></span>F1F9 Fast - Financial Modeling</li>
           <li className='opleidingenItem'><span className='blue-stip'></span>Industriële Informatica - Hogeschool PXL</li>
         </ul>
       </div>
+      </div>
+
+      <div className='CV2-blok-3'>
       <div className="navigation-arrows">
         <div className="up-arrow" onClick={(e) => {e.stopPropagation(); scrollToPreviousSection();}}>
           &#x2191;
@@ -75,6 +81,7 @@ const CV2 = () => {
           &#x2193;
         </div>
       </div>
+    </div>
     </div>
   );
 };
